@@ -1,5 +1,6 @@
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
 import pages.CreateIssuePage;
 import pages.CreatedIssuePage;
 import pages.IssuesRepositoryPage;
@@ -21,6 +22,6 @@ public class CreateNewIssueTest extends ConfigTest {
     CreateIssuePage createIssuePage = new CreateIssuePage(driver);
     createIssuePage.createNewIssue("TitleNewIssue1", "DescNewIssue1");
     CreatedIssuePage createdIssuePage = new CreatedIssuePage(driver);
-    Assertions.assertTrue(createdIssuePage.getOpenStatusLabel().isDisplayed());
+    Assert.assertTrue(createdIssuePage.getOpenStatusLabel().isDisplayed());
   }
 }

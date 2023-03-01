@@ -16,7 +16,7 @@ public class MainPage extends ConfigPage {
       driver.findElement(By.xpath("//a[contains(text(),'Marketplace')]"));
   private WebElement repoTest =
       driver.findElement(
-          By.xpath("//div[@class='wb-break-word']/a[contains(@href,'QA_Automation')]" +
+          By.xpath("//div[@class='wb-break-word']/a[contains(@href,'SeleniumCucumber')]" +
               "[contains(@data-hydro-click,'location=left')]"));
 
   public WebElement getIssuesTab() {
