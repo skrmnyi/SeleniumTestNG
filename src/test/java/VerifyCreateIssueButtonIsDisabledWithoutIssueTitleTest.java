@@ -1,5 +1,6 @@
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
 import pages.CreateIssuePage;
 import pages.IssuesRepositoryPage;
 import pages.LoginPage;
@@ -19,7 +20,7 @@ public class VerifyCreateIssueButtonIsDisabledWithoutIssueTitleTest extends Conf
     issuesRepositoryPage.navigateToCreateIssuePage();
     CreateIssuePage createIssuePage = new CreateIssuePage(driver);
     createIssuePage.fillInputBody("Test text");
-    Assertions.assertFalse(createIssuePage.getSubmitNewIssueButton().isEnabled());
+    Assert.assertFalse(createIssuePage.getSubmitNewIssueButton().isEnabled());
   }
 }
 
