@@ -1,3 +1,4 @@
+package TestSiute;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -7,10 +8,8 @@ import pages.MainPage;
 import pages.RepositoryPage;
 
 public class CheckNoIssuesCreatedMessageTest extends ConfigTest {
-    @Test
+    @Test (priority = 1)
     public void checkNoIssuesCreatedMessageTest() {
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.successfulLogin("skrmnyi", "*******");
         MainPage mainPage = new MainPage(driver);
         mainPage.navigateToRepositoryPage();
         RepositoryPage repositoryPage = new RepositoryPage(driver);

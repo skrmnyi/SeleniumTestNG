@@ -1,15 +1,13 @@
+package TestSiute;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.LoginPage;
 import pages.MainPage;
 
-public class LoginTest extends ConfigTest {
+public class CheckElementsAfterLoginTest extends ConfigTest {
 
-    @Test
+    @Test(priority = 0)
     public void successfulLogin() {
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.successfulLogin("skrmnyi", "*******");
         MainPage mainPage = new MainPage(driver);
         Assert.assertTrue(mainPage.getRepoTest().isDisplayed());
         Assert.assertTrue(mainPage.getIssuesTab().isDisplayed());

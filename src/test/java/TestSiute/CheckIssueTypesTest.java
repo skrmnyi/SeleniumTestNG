@@ -1,3 +1,5 @@
+package TestSiute;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -9,10 +11,8 @@ import pages.LoginPage;
 import pages.MainPage;
 
 public class CheckIssueTypesTest extends ConfigTest {
-    @Test
+    @Test (priority = 0)
     public void checkIssueTypesTest() {
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.successfulLogin("skrmnyi", "*******");
         MainPage mainPage = new MainPage(driver);
         mainPage.navigateToIssuesGlobalPage();
         IssuesGlobalPage issuesGlobalPage = new IssuesGlobalPage(driver);
