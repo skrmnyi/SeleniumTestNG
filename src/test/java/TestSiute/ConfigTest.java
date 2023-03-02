@@ -19,7 +19,7 @@ public class ConfigTest {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.get("https://github.com/login");
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.successfulLogin("skrmnyi", "*******");
+        loginPage.successfulLogin("skrmnyi", "********");
     }
 
     @AfterMethod

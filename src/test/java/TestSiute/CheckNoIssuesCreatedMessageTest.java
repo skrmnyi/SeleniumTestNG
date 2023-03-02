@@ -8,10 +8,10 @@ import pages.MainPage;
 import pages.RepositoryPage;
 
 public class CheckNoIssuesCreatedMessageTest extends ConfigTest {
-    @Test (priority = 1)
+    @Test
     public void checkNoIssuesCreatedMessageTest() {
         MainPage mainPage = new MainPage(driver);
-        mainPage.navigateToRepositoryPage();
+        mainPage.navigateToSpecificRepo("SeleniumTestNG");
         RepositoryPage repositoryPage = new RepositoryPage(driver);
         repositoryPage.navigateToIssuesRepositoryPage();
         IssuesRepositoryPage issuesRepositoryPage = new IssuesRepositoryPage(driver);

@@ -13,7 +13,7 @@ public class CreateNewIssueTest extends ConfigTest {
   @Test (priority = 1)
   public void createNewIssueTest() {
     MainPage mainPage = new MainPage(driver);
-    mainPage.navigateToRepositoryPage();
+    mainPage.navigateToSpecificRepo("SeleniumCucumber");
     RepositoryPage repositoryPage = new RepositoryPage(driver);
     repositoryPage.navigateToIssuesRepositoryPage();
     IssuesRepositoryPage issuesRepositoryPage = new IssuesRepositoryPage(driver);

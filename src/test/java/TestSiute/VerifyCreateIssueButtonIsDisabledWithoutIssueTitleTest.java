@@ -12,7 +12,7 @@ public class VerifyCreateIssueButtonIsDisabledWithoutIssueTitleTest extends Conf
   @Test (priority = 2)
   public void verifyCreateIssueButtonIsDisabledWithoutIssueTitleTest() {
     MainPage mainPage = new MainPage(driver);
-    mainPage.navigateToRepositoryPage();
+    mainPage.navigateToSpecificRepo("SeleniumCucumber");
     RepositoryPage repositoryPage = new RepositoryPage(driver);
     repositoryPage.navigateToIssuesRepositoryPage();
     IssuesRepositoryPage issuesRepositoryPage = new IssuesRepositoryPage(driver);

@@ -5,17 +5,21 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class RepositoryPage extends ConfigPage {
-  public RepositoryPage(WebDriver driver) {
-    super(driver);
-  }
+    public RepositoryPage(WebDriver driver) {
+        super(driver);
+    }
 
-  WebElement codeTab = driver.findElement(By.xpath("//span[@data-content=\"Code\"]"));
-  WebElement issuesTab =
-      driver.findElement(By.xpath("//span[@data-content=\"Issues\"]/parent::a"));
-  WebElement pullRequests = driver.findElement(By.xpath("//span[@data-content=\"Pull requests\"]"));
+    WebElement issuesTab =
+            driver.findElement(By.xpath("//span[@data-content=\"Issues\"]/parent::a"));
+    WebElement pullRequests = driver.findElement(By.xpath("//span[@data-content=\"Pull requests\"]"));
 
-  public IssuesRepositoryPage navigateToIssuesRepositoryPage() {
-    issuesTab.click();
-    return new IssuesRepositoryPage(driver);
-  }
+    public boolean getRepoTitle(String repoName) {
+        WebElement repoTitle = driver.findElement(By.xpath("//a[text()='" + repoName + "']"));
+        return true;
+    }
+
+    public IssuesRepositoryPage navigateToIssuesRepositoryPage() {
+        issuesTab.click();
+        return new IssuesRepositoryPage(driver);
+    }
 }
