@@ -14,7 +14,7 @@ public class VerifyJumpToRepositoryFunctionalityTest extends ConfigTest {
     }
 
     @Test(priority = 0, dataProvider = "repositories")
-    public void VerifyJumpToRepositoryFunctionalityTest(String repoName) {
+    public void VerifyNavigateToRepositoryTest(String repoName) {
         MainPage mainPage = new MainPage(driver);
         mainPage.navigateToSpecificRepo(repoName);
         RepositoryPage repositoryPage = new RepositoryPage(driver);
